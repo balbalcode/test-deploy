@@ -1,0 +1,1 @@
+import{v as o}from"./index-DDrS01Mm.js";function e(){var r;const t=o(),i=(r=t==null?void 0:t.proxy)==null?void 0:r.$utility;if(!i)throw new Error("$utility is not available.");return i}export{e as u};
