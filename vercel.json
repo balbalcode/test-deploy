@@ -1,35 +1,9 @@
 {
   "version": 2,
-  "public": true,
   "trailingSlash": false,
   "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/harbor/__legacy/_nuxt/(.*)",
-      "destination": "/harbor/__legacy/_nuxt/$1"
-    },
-    {
-      "source": "/harbor/__legacy/(.*)",
-      "destination": "/harbor/__legacy/$1"
-    },
-    {
-      "source": "/harbor/(.*)",
-      "destination": "/harbor/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
